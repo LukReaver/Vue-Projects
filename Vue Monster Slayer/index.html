@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueGame</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="healthBox">
+            <div class="player">
+                <h1 class="player__Nick">{{ player }}</h1>
+                <div v-show='true' class="player__healthBar" :style="{width:playerBarWidth+'%'}">{{playerHelth}}</div>
+            </div>
+            <div class="player">
+                <h1 class="player__Nick">{{ comp }}</h1>
+                <div class="player__healthBar" :style="{width:compBarWidth+'%'}">{{ compHelth }}</div>
+            </div>
+        </div>
+        <div class="buttonBox">
+            <button class="button" @click="atak" v-bind:disabled='monsterMove'>Atak</button>
+            <button class="button" v-bind:disabled='SpecAtakActive ' @click="SpecialAtak" v-if='SpecAtakActive ?  specColor="#555" :  specColor="white" '
+                :style="{color:specColor}">Special Atak</button>
+            <button class="button" @click="health">Health</button>
+            <button class="button" @click="reset">Restart</button>
+        </div>
+        <div class="battleProgres">
+            <ul class="battleProgres__list">
+                <li class="battleProgres__item" v-for="(item,key) in tab" :key="key" :class="{'playerTurn': item.player , 'monsterTurn':!item.player}">{{
+                    item.txt }}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
