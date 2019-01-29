@@ -6,7 +6,7 @@
           type="text"
           name="inputfield"
           id="inputfield"
-          placeholder="add task into list"
+          placeholder="Add task into list"
           v-model="somevar"
           v-validate="'min:5'"
         >
@@ -33,7 +33,7 @@
           </li>
         </transition-group>
       </ul>
-      <p>These are the skills that you want to possess</p>
+      <p>These are your task</p>
     </div>
   </div>
 </template>
