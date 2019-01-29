@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/dist/precache-manifest.36d3ac63b21f142662a1cc9525bd1db2.js"
+  "precache-manifest.1c2d8d1158925bd8779a3b9d2604f855.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "hackernews"});

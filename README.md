@@ -1,6 +1,6 @@
 # Vue-Projects
 
-Run [Hacker-News](https://lukreaver.github.io/Vue-Projects/HackerNews/dist/index.html) - (vue , vuex)
+Run [Hacker-News](https://lukreaver.github.io/Vue-Projects/HackerNews/dist/index.html) - (vue, vuex, axios, debounce, bulma)
 
 Run [Quotes](https://lukreaver.github.io/Vue-Projects/VueQuotes/index.html) - (vue)
 
